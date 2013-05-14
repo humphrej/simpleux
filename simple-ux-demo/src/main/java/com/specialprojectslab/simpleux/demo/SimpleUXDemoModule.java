@@ -24,7 +24,6 @@ public class SimpleUXDemoModule extends AbstractModule {
     protected void configure() {
         Multibinder<SimpleUXComponent> uriBinder = Multibinder.newSetBinder(binder(), SimpleUXComponent.class);
         uriBinder.addBinding().to(FilterTableDemoComponent.class).in(Singleton.class);
-        uriBinder.addBinding().to(TreeTableDemoComponent.class).in(Singleton.class);
 
         //this deals with gui persistence
         bind(PerspectiveFactory.class).to(SimpleUXDemoPerspectiveFactory.class).in(Singleton.class);
@@ -38,7 +37,6 @@ public class SimpleUXDemoModule extends AbstractModule {
         MapBinder<String,String> iconBinder = MapBinder.newMapBinder(binder(), String.class, String.class);
         iconBinder.addBinding("DEMO_COMPONENT").toInstance("com/famfamfam/silk/application_key.png");
         iconBinder.addBinding("FILTER_DEMO_COMPONENT").toInstance("com/famfamfam/silk/application_key.png");
-        iconBinder.addBinding("TREE_DEMO_COMPONENT").toInstance("com/famfamfam/silk/application_key.png");
 
 
     }
