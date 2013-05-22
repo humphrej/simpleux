@@ -3,7 +3,3 @@
 target
 .idea
 
-# Package Files #
-*.jar
-*.war
-*.ear
